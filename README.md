@@ -1,28 +1,36 @@
 # GeoDistance
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/geo_distance`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is used to provide a list of customer records that are within desired distance from specified location.
+Customer records are a text file -- one customer per line, JSON lines formatted.
+This gem will read the full list of customers and output the names and user ids of matching customers (within X meters), sorted by User ID (ascending).
 
 ## Installation
 
-Add this line to your application's Gemfile:
+This gem is a CLI tool.
 
-```ruby
-gem 'geo_distance'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Install it yourself as:
 
     $ gem install geo_distance
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ geo_distance get_customers_in_radius valid_customers.txt 53.339428 -6.257664 100000
+    ["Ian Kehoe", 4]
+    ["Nora Dempsey", 5]
+    ["Theresa Enright", 6]
+    ["Eoin Ahearn", 8]
+    ["Richard Finnegan", 11]
+    ["Christina McArdle", 12]
+    ["Olive Ahearn", 13]
+    ["Michael Ahearn", 15]
+    ["Patricia Cahill", 17]
+    ["Eoin Gallagher", 23]
+    ["Rose Enright", 24]
+    ["Stephen McArdle", 26]
+    ["Oliver Ahearn", 29]
+    ["Nick Enright", 30]
+    ["Alan Behan", 31]
+    ["Lisa Ahearn", 39]
 
 ## Development
 
@@ -32,7 +40,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/geo_distance. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/zeljkokalezic/geo_distance. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
