@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "geo_distance/cli"
+
+GeoDistance::CLI.start
